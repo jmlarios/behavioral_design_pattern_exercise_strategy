@@ -25,7 +25,7 @@ strategy_app/
 From the project root:
 
 ```bash
-python -m strategy_app.presentation.cli --items '[{"sku":"A","qty":2,"unit_price":10.0},{"sku":"B","qty":5,"unit_price":3.0}]' --strategy percent --percent 10
+python -m presentation.cli --items '[{"sku":"A","qty":2,"unit_price":10.0},{"sku":"B","qty":5,"unit_price":3.0}]' --strategy percent --percent 10
 # Subtotal: 35.00
 # Strategy: percent
 # Total: 31.50
@@ -34,7 +34,7 @@ python -m strategy_app.presentation.cli --items '[{"sku":"A","qty":2,"unit_price
 Bulk strategy:
 
 ```bash
-python -m strategy_app.presentation.cli --items '[{"sku":"A","qty":2,"unit_price":10.0},{"sku":"B","qty":5,"unit_price":3.0}]' --strategy bulk --sku B --threshold 5 --per-item-off 0.5
+python -m presentation.cli --items '[{"sku":"A","qty":2,"unit_price":10.0},{"sku":"B","qty":5,"unit_price":3.0}]' --strategy bulk --sku B --threshold 5 --per-item-off 0.5
 # Subtotal: 35.00
 # Strategy: bulk
 # Total: 32.50
@@ -43,7 +43,7 @@ python -m strategy_app.presentation.cli --items '[{"sku":"A","qty":2,"unit_price
 Composite strategy (percent then bulk):
 
 ```bash
-python -m strategy_app.presentation.cli --items '[{"sku":"A","qty":2,"unit_price":10.0},{"sku":"B","qty":5,"unit_price":3.0}]' --strategy composite --percent 10 --sku B --threshold 5 --per-item-off 0.5
+python -m presentation.cli --items '[{"sku":"A","qty":2,"unit_price":10.0},{"sku":"B","qty":5,"unit_price":3.0}]' --strategy composite --percent 10 --sku B --threshold 5 --per-item-off 0.5
 # Subtotal: 35.00
 # Strategy: composite
 # Total: 29.00
